@@ -190,9 +190,7 @@ function App() {
           )}
           {item.stock <= item.safety && <span style={styles.lowStock}> ⚠ 低庫存</span>}
         </div>
-        {role !== "manager" && (
-          <button style={styles.button} onClick={() => deductStock(item.id)}>扣 1 {item.unit}</button>
-        )}
+        {/* ⚠ 這裡刪掉扣庫存按鈕 */}
       </div>
     ))}
     <button style={styles.backButton} onClick={() => setPage("home")}>回首頁</button>
